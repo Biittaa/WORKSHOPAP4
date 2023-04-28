@@ -14,4 +14,12 @@ public class Voting {
         this.question = question;
         this.isAnonymous = isAnonymous;
     }
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
 }
