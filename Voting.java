@@ -54,4 +54,23 @@ public class Voting {
         choices.get(m).add(vote);
 
     }
+    public void printResults(){
+        for(String n:choices.keySet()){
+            System.out.print(n+" : ");
+            System.out.print(choices.get(n).size()+" ");
+        }
+    }
+    public void printVoters(){
+        for(String n:choices.keySet()){
+            System.out.println(n+" : ");
+            for(Vote s:choices.get(n)){
+                System.out.print(" " + s.getVoter().toString()+" ");
+            }
+            System.out.println(" ");
+        }
+    }
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
