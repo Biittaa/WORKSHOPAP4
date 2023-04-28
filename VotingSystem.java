@@ -16,5 +16,35 @@ public class VotingSystem {
     public  ArrayList<Voting> getVotingList() {
         return votingList;
     }
+    public void printResults(int index){
+        votingList.get(index).printResults();
+    }
+    public void printVoters(int index){
+        votingList.get(index).printVoters();
+    }
+    public void printVoting(int index){
+        System.out.println(votingList.get(index).getQuestion());
+        for(String c:votingList.get(index).getChoices()){
+            System.out.println(c);
+        }
+    }
+    public void vote(int index,Person voter,ArrayList<String> choice){
+        votingList.get(index).vote(voter,choice);
+    }
+    public void vote(int index,Person voter){
+        votingList.get(index).vote(voter);
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VotingSystem that = (VotingSystem) o;
+        return Objects.equals(votingList, that.votingList);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(votingList);
+    }
 
 }
