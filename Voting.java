@@ -21,5 +21,4 @@ public class Voting {
     public void setQuestion(String question) {
         this.question = question;
     }
-
 }
