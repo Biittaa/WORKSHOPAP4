@@ -10,4 +10,11 @@ public class VotingSystem {
             voting.createChoice(choice);
         votingList.add(voting);
     }
+    public Voting getVoting(int index){
+        return votingList.get(index);
+    }
+    public  ArrayList<Voting> getVotingList() {
+        return votingList;
+    }
+
 }
